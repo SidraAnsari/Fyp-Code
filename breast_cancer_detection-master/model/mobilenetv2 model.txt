@@ -1,0 +1,11 @@
+## ----Code taken from Github repo link : https://github.com/mrdvince/breast_cancer_detection/blob/master/model/model.py-----##
+##---Remaining Code remains the same of "model.py" except for the last 6 to 7 lines---##
+def mobilenet_v2():
+    model_transfer4 = models.mobilenet_v2(pretrained=True)
+    for param4 in model_transfer4.parameters():
+        param4.requires_grad = False
+
+    model_transfer4.classifier = nn.Linear(1280, 2)
+
+    return model_transfer4
+    
