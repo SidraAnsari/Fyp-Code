@@ -1,4 +1,4 @@
-##Code has taken from this Github **repo https://github.com/mrdvince/breast_cancer_detection**##
+Code has taken from this Github repo: **https://github.com/mrdvince/breast_cancer_detection**
 # Breast Cancer Histopathological Dataset (BreakHis)
 
 A computer vision model to detect breast cancer in histopathological images. The two classes include:
