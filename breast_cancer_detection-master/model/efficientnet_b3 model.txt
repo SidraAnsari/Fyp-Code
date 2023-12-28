@@ -1,0 +1,11 @@
+## ----Code taken from Github repo link : https://github.com/mrdvince/breast_cancer_detection/blob/master/model/model.py-----##
+##---Remaining Code remains the same of "model.py" except for the last 6 to 7 lines---##
+
+def efficientnet_b3():
+    model_transfer1 = models.efficientnet_b3(pretrained=True)
+    for param1 in model_transfer1.parameters():
+        param1.requires_grad = False
+
+    model_transfer1.classifier = nn.Linear(1536, 2)
+
+    return model_transfer1
