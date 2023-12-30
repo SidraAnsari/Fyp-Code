@@ -22,17 +22,17 @@ Pytorch
 
 # Models:
 ## Image Classification Models Used:
-Vision Transformers<br>
-Densenet121<br>
-Vgg-16<br>
-Vgg-19<br>
-Mobilenetv2<br>
-Efficientnetb3
+-Vision Transformers<br>
+-Densenet121<br>
+-Vgg-16<br>
+-Vgg-19<br>
+-Mobilenetv2<br>
+-Efficientnetb3
 
 ## Image Translation Models Used:
-Autoencoders<br>
-CycleGan<br>
-PyramidPix2pix
+-Autoencoders<br>
+-CycleGan<br>
+-PyramidPix2pix
 
 ## The framework of the proposed pyramid pix2pix model:
 
