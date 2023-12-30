@@ -34,7 +34,7 @@ Autoencoders<br>
 CycleGan<br>
 PyramidPix2pix
 
-![PyramidPix2pix Proposed Model](C:\Users\Sidra\Downloads\Pyramidpix2pix framework)
+![PyramidPix2pix Proposed Model](Pyramidpix2pix framework.png)
 
 
 
