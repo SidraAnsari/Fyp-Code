@@ -10,7 +10,7 @@ components.
 Image Classification performed on CNN and Transfer Learning Models such as Vision Transformers using BreakHis Dataset.
 Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleGans Models using Breast Cancer Immunohistochemical Dataset.
 
-## Datasets
+## Datasets Used:
 
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
 - [BCI](https://bci.grand-challenge.org/dataset/)
