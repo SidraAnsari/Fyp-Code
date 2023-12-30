@@ -12,6 +12,6 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 
 ## Datasets
 
-- [BreaKHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
+- [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
 - [BCI](https://bci.grand-challenge.org/dataset/)
 
