@@ -30,7 +30,33 @@ Pytorch
 -Efficientnetb3
 
 ## Image Translation Models Used:
--Autoencoders<br>
+# Autoencoders<br>
+Autoencoder is a type of neural network that is used for unsupervised learning and <br> dimensionality reduction. It is designed to learn a compressed representation or encoding of <br>the input data and then reconstruct the original data from this compressed representation.<br>
+• Autoencoders consist of two main parts: an encoder and a decoder. The <br>
+encoder takes an input, typically a high-dimensional data point, and maps it <br>
+to a lower-dimensional representation, called the latent space or encoding.<br>
+
+• The encoder typically consists of multiple layers, such as fully connected or <br>
+convolutional layers, that gradually reduce the dimensionality of the input <br>
+data.<br>
+
+• The decoder, on the other hand, takes the encoded representation and <br>
+reconstruct the original input from it. The decoder is a mirror image of the encoder,<br>
+with layers that gradually increase the dimensionality until the output matches <br>
+the input.<br>
+
+• During training, the autoencoder is fed with the input data and learns to <br>
+minimize the reconstruction error, which measures the difference between the <br>
+original input and the output of the decoder. This training process encourages <br>
+the autoencoder to capture and learn meaningful features from the input data <br>
+that are necessary for accurate reconstruction. The compressed representation in <br>
+the latent space serves as a bottleneck that forces the autoencoder to <br>
+capture the most salient information from the data. The loss function measures the <br>dissimilarity between the input and the output. The choice of loss function depends on <br>
+the type of data and the desired properties of the autoencoder. Mean Squared Error (MSE) is <br>commonly used for continuous data,while Binary Cross-Entropy (BCE) is often used for <br>
+binary data.
+
+• The autoencoder is trained by minimizing the loss function through back-propagation. The <br><br>input data is passed through the encoder to obtain the encoded representation, and then the <br>decoder reconstructs the input from the encoded representation. The difference between the <br> original input and the reconstructed output is used to compute the loss, and the gradients<br> are propagated backward to update the weights of the autoencoder.
+
 -CycleGan<br>
 -PyramidPix2pix
 
