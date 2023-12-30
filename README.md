@@ -56,7 +56,7 @@ capture the most salient information from the data. The loss function measures t
 the type of data and the desired properties of the autoencoder. Mean Squared Error (MSE) is <br>commonly used for continuous data,while Binary Cross-Entropy (BCE) is often used for <br>
 binary data.
 
-• The autoencoder is trained by minimizing the loss function through back-propagation. The <br>input data is passed through the encoder to obtain the encoded representation, and then the <br>decoder reconstructs the input from the encoded representation. The difference between the <br> original input and the reconstructed output is used to compute the loss, and the <br>gradients are propagated backward to update the weights of the autoencoder.<br>
+• The autoencoder is trained by minimizing the loss function through back-propagation.<br> The input data is passed through the encoder to obtain the encoded representation, and then the decoder <br> reconstructs the input from the encoded representation The difference between the original input and the reconstructed output <br> is used to compute the loss, and the <br>gradients are propagated backward to update the weights of the autoencoder.<br>
 
 -CycleGan<br>
 -PyramidPix2pix
