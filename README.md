@@ -34,8 +34,7 @@ Autoencoders<br>
 CycleGan<br>
 PyramidPix2pix
 
-![PyramidPix2pix Proposed Model](Pyramidpix2pix framework.png)
-
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Pyramidpix2pix%20framework.png)
 
 
 
