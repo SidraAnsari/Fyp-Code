@@ -17,3 +17,21 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
 - [BCI](https://bci.grand-challenge.org/dataset/)
 
+## Framework Used:
+Pytorch
+
+# Models:
+## Image Classification Models Used:
+Vision Transformers
+Densenet121
+Vgg-16
+Vgg-19
+Mobilenetv2
+Efficientnetb3
+
+## Image Translation Models Used:
+Autoencoders
+CycleGan
+PyramidPix2pix
+
+
