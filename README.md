@@ -32,6 +32,7 @@ Pytorch
 ## Image Translation Models Used:
 # Autoencoders<br>
 Autoencoder is a type of neural network that is used for unsupervised learning and <br> dimensionality reduction. It is designed to learn a compressed representation or encoding of <br>the input data and then reconstruct the original data from this compressed representation.<br>
+
 • Autoencoders consist of two main parts: an encoder and a decoder. The <br>
 encoder takes an input, typically a high-dimensional data point, and maps it <br>
 to a lower-dimensional representation, called the latent space or encoding.<br>
@@ -55,7 +56,7 @@ capture the most salient information from the data. The loss function measures t
 the type of data and the desired properties of the autoencoder. Mean Squared Error (MSE) is <br>commonly used for continuous data,while Binary Cross-Entropy (BCE) is often used for <br>
 binary data.
 
-• The autoencoder is trained by minimizing the loss function through back-propagation. The <br><br>input data is passed through the encoder to obtain the encoded representation, and then the <br>decoder reconstructs the input from the encoded representation. The difference between the <br> original input and the reconstructed output is used to compute the loss, and the gradients<br> are propagated backward to update the weights of the autoencoder.
+• The autoencoder is trained by minimizing the loss function through back-propagation. The <br>input data is passed through the encoder to obtain the encoded representation, and then the <br>decoder reconstructs the input from the encoded representation. The difference between the <br> original input and the reconstructed output is used to compute the loss, and the <br>gradients are propagated backward to update the weights of the autoencoder.<br>
 
 -CycleGan<br>
 -PyramidPix2pix
