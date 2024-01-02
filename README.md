@@ -23,6 +23,9 @@ Pytorch
 # Models:
 ## Image Classification Models Used:
 -Vision Transformers<br>
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20model%20image.jpg)
+
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20arch.png)
 -Densenet121<br>
 -Vgg-16<br>
 -Vgg-19<br>
