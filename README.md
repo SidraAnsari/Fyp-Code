@@ -12,26 +12,26 @@ components.
 Image Classification performed on CNN and Transfer Learning Models such as Vision Transformers using BreakHis Dataset.
 Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleGans Models using Breast Cancer Immunohistochemical Dataset.
 
-## Datasets Used:
+# Setup:Envs
+-Windows<br>
+-Python>=3.11<br>
+-NVIDIA GPU 
+
+# Framework Used:
+-Pytorch
+
+# Datasets Used:
 
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
 
-- ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Representative-examples-of-BreaKHis-dataset.png)
+  ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Representative-examples-of-BreaKHis-dataset.png)
   
 - [BCI](https://bci.grand-challenge.org/dataset/)
   
-- ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
-
-## Setup:Envs
--Windows
--Python>=3.11
--NVIDIA GPU 
-
-## Framework Used:
-Pytorch
+  ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
 
 # Models:
-## Image Classification Models Used:
+# Image Classification Models Used:
 -Vision Transformers<br>
 
 ## Image Classification using Vision Transformer model using Transfer Learning:
@@ -48,7 +48,7 @@ Pytorch
 -Mobilenetv2<br>
 -Efficientnetb3
 
-## Image Translation Models Used:
+# Image Translation Models Used:
 # Autoencoders<br>
 Autoencoder is a type of neural network that is used for unsupervised learning and <br> dimensionality reduction. It is designed to learn a compressed representation or encoding of <br>the input data and then reconstruct the original data from this compressed representation.<br>
 
