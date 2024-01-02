@@ -31,6 +31,7 @@ Pytorch
 ## The framework of the proposed Vision Transformer model:
 
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20arch.png)
+
 -Densenet121<br>
 -Vgg-16<br>
 -Vgg-19<br>
