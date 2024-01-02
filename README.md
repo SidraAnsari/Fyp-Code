@@ -15,7 +15,11 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 ## Datasets Used:
 
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
+  
 - [BCI](https://bci.grand-challenge.org/dataset/)
+  
+- ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
+  
 
 ## Framework Used:
 Pytorch
