@@ -25,6 +25,7 @@ Pytorch
 -Vision Transformers<br>
 
 ## Image Classification using Vision Transformer model using Transfer Learning:
+
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20#model%20image.jpg)
 
 ## The framework of the proposed Vision Transformer model:
