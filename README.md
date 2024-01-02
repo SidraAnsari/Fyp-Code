@@ -86,5 +86,19 @@ binary data.
 
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Pyramidpix2pix%20framework.png)
 
+## Abbreviations
+
+• CNN : Convolutional Neural Network <br>
+• ViT : Vision Transformers <br>
+• VGG-16 : 16-layer variant of the Visual Geometry Group (VGG) convolutional
+neural network (CNN) architecture.<br>
+• VGG-19: VGG-19 stands for the 19-layer variant of the Visual Geometry
+Group (VGG) convolutional neural network (CNN) architecture.<br>
+• cycleGAN : Cycle-Consistent Generative Adversarial Network <br>
+• H & E : Hematoxylin and Eosin <br>
+• IHC : Immunohistochemical <br>
+• BCI : Breast Cancer Immunohistochemical Dataset <br>
+• BreaKHis :Breast Cancer Histopathological Dataset
+
 
 
