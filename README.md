@@ -30,19 +30,51 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
   
   ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
 
-# Models:
-# Image Classification Models Used:
-## Vision Transformers
-<br>
-Vision Transformer (ViT) is the backbone of multiple Transformer blocks. The ViT processes the input histopathology image using the BreakHis dataset and splits the image into fixed-size patches,<br> which are understandable as tokens. We add a Positional Encoding layer that linearly embeds each patch, so our image patches are arranged in the same order as the input. Then, we add a few ResNet layers <br> to the Vision Transformer (ViT) model that attain excellent results compared to the state-of-the-art convolutional networks. A transformer implemented directly to sequences of image patches that perform <br> very well on image classification tasks. We employ the standard technique of appending an additional learnable "classification token" to the series to carry out the classification of the breast cancer <br> images, as whether the patient is infected with benign (non-cancerous) and malignant(cancerous)\cite{dosovitskiy2021image}. It is the best-proposed model among all our classification models, with the highest accuracy of 92.5%. 
-
-## Image Classification using Transfer Learning:
+# Image Classification using Transfer Learning:
 Transfer learning in Breast Cancer Image classification refers to utilizing pre-trained models trained on a large dataset from a different domain as a starting point for introducing <br> a new image classification model.TL leverages the knowledge learned from a different but related task to boost the performance of the breast image classification model.<br> It can extend earlier information by including data from a different domain to target future details. Subsequently, it may be a great idea to extract data from a related domain and transfer the <br> information extracted to the target domain.  
 In transfer learning, the pre-trained model's architecture is used as a feature extractor. The initial layers of the model, which learn <br> basic visual features like edges and textures, are retained. These layers are frozen, meaning their weights are not updated during training to preserve the known elements.<br>
 The latter layers of the pre-trained model, which capture more high-level and task-specific features, are modified and retrained using the breast image <br>
 dataset, called fine-tuning. By updating the weights of these layers, the model adapts the specific characteristics of the cancer image classification task.<br>
 
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/TL%20new.drawio.png)
+
+# Models:
+# Image Classification Models Used:
+## Vision Transformers
+<br>
+Vision Transformer (ViT) is the backbone of multiple Transformer blocks. The ViT processes the input histopathology image using the BreakHis dataset and splits the image into fixed-size patches,<br> which are understandable as tokens. We add a Positional Encoding layer that linearly embeds each patch, so our image patches are arranged in the same order as the input. Then, we add a few ResNet layers <br> to the Vision Transformer (ViT) model that attain excellent results compared to the state-of-the-art convolutional networks. A transformer implemented directly to sequences of image patches that perform <br> very well on image classification tasks. We employ the standard technique of appending an additional learnable "classification token" to the series to carry out the classification of the breast cancer <br> images, as whether the patient is infected with benign (non-cancerous) and malignant(cancerous)\cite{dosovitskiy2021image}. It is the best-proposed model among all our classification models, with the highest accuracy of 92.5%. 
+
+## Densenet121
+<br>
+\subsection{EfficientNet\_B3} 
+Medical image analysis become an important tool for diagnosing and treating cancer. One such algorithm is the EfficientNet, which achieves state-of-the-art
+performance in various image classification tasks, <br>including breast cancer classification.For this classification, the EfficientNet
+algorithm train on medical images of different classes of cancer to learn features that are specific to
+each type. <br> The algorithm is to classify
+new medical images into their respective cancer classes
+based on the learned features\cite{Anwar_2023}.<br>
+EfficientNet is a family of deep-learning models 
+designed to be both practical and efficient in terms of memory and computation.<br> It is a three-block baseline model proven to achieve state-of-the-art performance on various image classification benchmarks, using significantly fewer parameters and analyses than other models. The accuracy of EfficientNet_B3 is 86.8% and 0.32 loss.<br>
+
+## MobileNet_V2
+<br>
+MobileNet is a family of deep-learning models designed to be lightweight and efficient. The MobileNet architecture model achieves high accuracy with low resource usage\cite{laxmisagar2022detection}<br>. It is mainly for high performance on resource-constrained devices. MobileNet-V2 is a 1.4x faster and 4x smaller version of the original MobileNet <br> model while maintaining similar accuracy. The accuracy of MobileNet_V2 is 90.4% and 0.24 loss.
+
+## DenseNet-121
+<br>
+DenseNet-121 is a deep CNN design characterized by dense connectivity that uses dense connections to improve information flow between layers. DenseNet-121 is an architecture for deep <br> convolutional neural networks introduced in 2016\cite{diagnostics13132242}. 
+Its design is to be more efficient than traditional
+convolutional neural networks.<br> It has a dense connectivity architecture, which allows it to learn long-range dependencies between features.DenseNet-121 is a 121-layer DenseNet model that should achieve state-of-the-art results on <br> various image classification benchmarks used for binary classification. \cite{man2020classification}.The accuracy of DenseNet-121 is 89.6% and 0.26 loss.
+
+## VGG-16
+<br>
+The VGG-16 network comprises 16 layers, is extremely simple to construct, and has a 7.7% error rate\cite{kashyap2022breast}. It is still a powerful model and has <br> been shown to achieve good results on breast cancer classification tasks. The accuracy of VGG-16 is 85.5% and 0.92 loss.
+
+
+## VGG-19
+<br>
+VGG-19 is a more extensive and deeper version of VGG-16. VGG19 is a variant of VGG consisting of 19 layers that are 16 convolutional layers, and three fully connected layers,<br> in addition to 5 max-pooling layers and 1 SoftMax layer)\cite{wakili2022classification} \cite{simonyan2014very}.<br> It has a deeper architecture with more parameters and is more computationally expensive,
+but it has been shown to achieve better results on some image classification tasks. <br>The accuracy of VGG-19 is 80.3% and 0.87 loss.
 
 
 
