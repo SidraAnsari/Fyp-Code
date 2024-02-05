@@ -36,9 +36,15 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 <br>
 Vision Transformer (ViT) is the backbone of multiple Transformer blocks. The ViT processes the input histopathology image using the BreakHis dataset and splits the image into fixed-size patches,<br> which are understandable as tokens. We add a Positional Encoding layer that linearly embeds each patch, so our image patches are arranged in the same order as the input. Then, we add a few ResNet layers <br> to the Vision Transformer (ViT) model that attain excellent results compared to the state-of-the-art convolutional networks. A transformer implemented directly to sequences of image patches that perform <br> very well on image classification tasks. We employ the standard technique of appending an additional learnable "classification token" to the series to carry out the classification of the breast cancer <br> images, as whether the patient is infected with benign (non-cancerous) and malignant(cancerous)\cite{dosovitskiy2021image}. It is the best-proposed model among all our classification models, with the highest accuracy of 92.5%. 
 
-## Image Classification using Vision Transformer model using Transfer Learning:
+## Image Classification using Transfer Learning:
+Transfer learning in Breast Cancer Image classification refers to utilizing pre-trained models trained on a large dataset from a different domain as a starting point for introducing <br> a new image classification model.TL leverages the knowledge learned from a different but related task to boost the performance of the breast image classification model.<br> It can extend earlier information by including data from a different domain to target future details. Subsequently, it may be a great idea to extract data from a related domain and transfer the <br> information extracted to the target domain.  
+In transfer learning, the pre-trained model's architecture is used as a feature extractor. The initial layers of the model, which learn <br> basic visual features like edges and textures, are retained. These layers are frozen, meaning their weights are not updated during training to preserve the known elements.<br>
+The latter layers of the pre-trained model, which capture more high-level and task-specific features, are modified and retrained using the breast image <br>
+dataset, called fine-tuning. By updating the weights of these layers, the model adapts the specific characteristics of the cancer image classification task.<br>
 
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20#model%20image.jpg)
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/TL%20new.drawio.png)
+
+
 
 ## The framework of the proposed Vision Transformer model:
 
