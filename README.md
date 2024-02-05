@@ -61,8 +61,9 @@ dataset, called fine-tuning. By updating the weights of these layers, the model 
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Acc.png)
 ## Loss of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Loss.png)
+
 # Image Translation Models Used:
-## CycleGan
+## CycleGAN
 <br>
 The key idea behind implementing the CycleGAN model is to enforce cycle consistency between the translated and original images. The BCI (Breast Cancer Immunohistochemical) dataset solves <br> the problem of paired image-to-image translation in CycleGAN, so it is our proposed model. This BCI dataset contains 4870 recruited picture sets with a range of HER2 expression levels included in the <br> collection. The two image domains of interest are A and B. The model of cycleGAN consists of two generator systems, G\_AB and G\_BA, and two discriminator systems, D\_A and D\_B.<br>
 The CycleGAN learns to minimize two types of losses during training: adversarial loss and cycle consistency loss. The adversarial loss encourages the generator to generate realistic-looking <br> images that fool the discriminator into identifying real or fake images. Generator G\_AB takes an input image from A and tries to generate a realistic image in  B that tricks discriminator D\_B with <br> mapping G\_AB: A → B. So in the same way also, generator G\_BA creates an image and tries to trick discriminator D\_A whereas D\_A points to recognize between images in domain A and interpreted images G\_BA, D\_B points <br> to discriminate between
@@ -109,6 +110,12 @@ binary data.
 
 
 -PyramidPix2pix
+
+# Graphical Representation of Image-TO-Image Translation Models:
+## PSNR Values of Models:
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/PSNR_ig.png)
+## SSIM score of Models:
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/SSIM_ig.png)
 
 ## Abbreviations
 
