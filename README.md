@@ -49,6 +49,14 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 -Efficientnetb3
 
 # Image Translation Models Used:
+-CycleGan<br>
+
+-PyramidPix2pix
+
+## The framework of the proposed CycleGAN model:
+
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/CycleGAN/cycleganPM.png)
+<br>
 # Autoencoders<br>
 Autoencoder is a type of neural network that is used for unsupervised learning and <br> dimensionality reduction. It is designed to learn a compressed representation or encoding of <br>the input data and then reconstruct the original data from this compressed representation.<br>
 
@@ -77,14 +85,10 @@ binary data.
 
 • The autoencoder is trained by minimizing the loss function through back-propagation.<br> The input data is passed through the encoder to obtain the encoded representation, and then the decoder reconstructs the input from the encoded representation The difference <br>between the original input and the reconstructed output is used to compute the loss, and the gradients are propagated backward to update the weights of the autoencoder.
 <br>
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Autoencoder/Autoencoder.drawio%20(2).png)
 
--CycleGan<br>
 
 -PyramidPix2pix
-
-## The framework of the proposed CycleGAN model:
-
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/CycleGAN/cycleganPM.png)
 
 ## Abbreviations
 
