@@ -56,6 +56,11 @@ dataset, called fine-tuning. By updating the weights of these layers, the model 
 -Mobilenetv2<br>
 -Efficientnetb3
 
+# Graphical Representation of Image Classification Models:
+## Accuracy of Models:
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Acc.png)
+## Loss of Models:
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Loss.png)
 # Image Translation Models Used:
 ## CycleGan
 <br>
