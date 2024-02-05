@@ -34,6 +34,8 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 # Image Classification Models Used:
 -Vision Transformers<br>
 
+Vision Transformer (ViT) is the backbone of multiple Transformer blocks. The ViT processes the input histopathology image using the BreakHis dataset and splits the image into fixed-size patches,<br> which are understandable as tokens. We add a Positional Encoding layer that linearly embeds each patch, so our image patches are arranged in the same order as the input. Then, we add a few ResNet layers <br> to the Vision Transformer (ViT) model that attain excellent results compared to the state-of-the-art convolutional networks. A transformer implemented directly to sequences of image patches that perform <br> very well on image classification tasks. We employ the standard technique of appending an additional learnable "classification token" to the series to carry out the classification of the breast cancer <br> images, as whether the patient is infected with benign (non-cancerous) and malignant(cancerous)\cite{dosovitskiy2021image}. It is the best-proposed model among all our classification models, with the highest accuracy of 92.5%. 
+
 ## Image Classification using Vision Transformer model using Transfer Learning:
 
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20#model%20image.jpg)
@@ -50,8 +52,14 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 
 # Image Translation Models Used:
 -CycleGan<br>
+ The key idea behind implementing the CycleGAN model is to enforce cycle consistency between the translated and original images. The BCI (Breast Cancer Immunohistochemical) dataset solves <br> the problem of paired image-to-image translation in CycleGAN, so it is our proposed model. This BCI dataset contains 4870 recruited picture sets with a range of HER2 expression levels included in the <br> collection. The two image domains of interest are A and B. The model of cycleGAN consists of two generator systems, G\_AB and G\_BA, and two discriminator systems, D\_A and D\_B.<br>
+The CycleGAN learns to minimize two types of losses during training: adversarial loss and cycle consistency loss. The adversarial loss encourages the generator to generate realistic-looking <br> images that fool the discriminator into identifying real or fake images. Generator G\_AB takes an input image from A and tries to generate a realistic image in  B that tricks discriminator D\_B with <br> mapping G\_AB: A → B. So in the same way also, generator G\_BA creates an image and tries to trick discriminator D\_A whereas D\_A points to recognize between images in domain A and interpreted images G\_BA, D\_B points <br> to discriminate between
+images in domain B  and G\_AB\cite{jose2021generative}\cite{zhu2020unpaired}. The generator takes an image from the source domain (H\&E) and tries <br>
+to transform it into an image that resembles the target domain (IHC). On the other hand, the discriminator is responsible for distinguishing between the generated and <br> original images from the target domain.
+By iteratively optimizing these losses, the CycleGAN can learn to map H\&E images to IHC images and vice versa.<br> This approach is instrumental in medical image analysis.
+Once trained, <br>the CycleGAN can convert unseen H\&E images to IHC images by feeding them into the generator.
 
--PyramidPix2pix
+
 
 ## The framework of the proposed CycleGAN model:
 
