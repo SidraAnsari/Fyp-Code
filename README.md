@@ -42,11 +42,15 @@ dataset, called fine-tuning. By updating the weights of these layers, the model 
 # Image Classification Models Used:
 ## Vision Transformers
 <br>
-Vision Transformer (ViT) is the backbone of multiple Transformer blocks. The ViT processes the input histopathology image using the BreakHis dataset and splits the image into fixed-size patches,<br> which are understandable as tokens. We add a Positional Encoding layer that linearly embeds each patch, so our image patches are arranged in the same order as the input. Then, we add a few ResNet layers <br> to the Vision Transformer (ViT) model that attain excellent results compared to the state-of-the-art convolutional networks. A transformer implemented directly to sequences of image patches that perform <br> very well on image classification tasks. We employ the standard technique of appending an additional learnable "classification token" to the series to carry out the classification of the breast cancer <br> images, as whether the patient is infected with benign (non-cancerous) and malignant(cancerous)\cite{dosovitskiy2021image}. It is the best-proposed model among all our classification models, with the highest accuracy of 92.5%. 
+Vision Transformer (ViT) is the backbone of multiple Transformer blocks. The ViT processes the input histopathology image using the BreakHis dataset and splits the image into fixed-size patches,<br> which are understandable as tokens. We add a Positional Encoding layer that linearly embeds each patch, so our image patches are arranged in the same order as the input. Then, we add a few ResNet layers <br> to the Vision Transformer (ViT) model that attain excellent results compared to the state-of-the-art convolutional networks. A transformer implemented directly to sequences of image patches that perform <br> very well on image classification tasks. We employ the standard technique of appending an additional learnable "classification token" to the series to carry out the classification of the breast cancer <br> images, as whether the patient is infected with benign (non-cancerous) and malignant(cancerous)\cite{dosovitskiy2021image}. It is the best-proposed model among all our classification models, with the highest accuracy of 92.5%.
 
-## Densenet121
+## The framework of the proposed Vision Transformer model:
+
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/PM%20VIT.drawio.png)
+
+
+## EfficientNet_B3
 <br>
-\subsection{EfficientNet\_B3} 
 Medical image analysis become an important tool for diagnosing and treating cancer. One such algorithm is the EfficientNet, which achieves state-of-the-art
 performance in various image classification tasks, <br>including breast cancer classification.For this classification, the EfficientNet
 algorithm train on medical images of different classes of cancer to learn features that are specific to
@@ -75,18 +79,6 @@ The VGG-16 network comprises 16 layers, is extremely simple to construct, and ha
 <br>
 VGG-19 is a more extensive and deeper version of VGG-16. VGG19 is a variant of VGG consisting of 19 layers that are 16 convolutional layers, and three fully connected layers,<br> in addition to 5 max-pooling layers and 1 SoftMax layer)\cite{wakili2022classification} \cite{simonyan2014very}.<br> It has a deeper architecture with more parameters and is more computationally expensive,
 but it has been shown to achieve better results on some image classification tasks. <br>The accuracy of VGG-19 is 80.3% and 0.87 loss.
-
-
-
-## The framework of the proposed Vision Transformer model:
-
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/PM%20VIT.drawio.png)
-
--Densenet121<br>
--Vgg-16<br>
--Vgg-19<br>
--Mobilenetv2<br>
--Efficientnetb3
 
 # Graphical Representation of Image Classification Models:
 ## Accuracy of Models:
