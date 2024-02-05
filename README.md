@@ -40,7 +40,7 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 
 ## The framework of the proposed Vision Transformer model:
 
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/vit%20arch.png)
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/PM%20VIT.drawio.png)
 
 -Densenet121<br>
 -Vgg-16<br>
@@ -82,9 +82,9 @@ binary data.
 
 -PyramidPix2pix
 
-## The framework of the proposed pyramid pix2pix model:
+## The framework of the proposed CycleGAN model:
 
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Pyramidpix2pix%20framework.png)
+![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/CycleGAN/cycleganPM.png)
 
 ## Abbreviations
 
