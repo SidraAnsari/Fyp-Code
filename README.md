@@ -1,16 +1,19 @@
-# Diagnosis and Treatment of Breast Cancer through Haematoxylin and Eosin Image Analysis
+# Diagnosis and Treatment of Breast Cancer using H&E Image Analysis:
 
 My Research based on Breast Cancer Disease diagnosis and treatment of Haematoxylin & Eosin Images with the help of Image Classification and Translation.
 Breast cancer is the driving cause of cancer-related
 passings among women around the world. This research explores
 the use of deep learning models in Breast cancer diagnosis and
-treatment using Hematoxylin and Eosin recolored histopatho-
-logical images. These images are used to
+treatment using histopathological images. These images are used to
 examine breast cancer tissue sections which are
 microscopic and color-coded, aid in identifying cellular and tissue
 components.
-Image Classification performed on CNN and Transfer Learning Models such as Vision Transformers using BreakHis Dataset.
-Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleGans Models using Breast Cancer Immunohistochemical Dataset.
+Image Classification performed on CNN initally because CNN which is a time-consuming task and that is why we then switched to Transfer Learning Model using pre-trained models such as SOTA model Vision Transformers using BreakHis Dataset.
+H&E images are essential for identifying cellular and tissue components. In contrast, Immunohistochemistry images reveal spatial information of specific cell types.
+CycleGAN, a state-of-the-art model, is used in Image-
+to-Image Translation experiments to generate/translate immunohistochemical im-
+ages from Hematoxylin and Eosin images for breast cancer treatment.These two
+images are a sequence-to-sequence data model in breast cancer image translation.
 
 # Setup:Envs
 -Windows<br>
@@ -67,8 +70,8 @@ pair of H&E to HER2 expression image translation dataset.
 <br>
 - [BCI](https://bci.grand-challenge.org/dataset/)
  ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
-
-# Image Classification using Transfer Learning:
+# Methods:
+## Image Classification using Transfer Learning:
 Transfer learning in Breast Cancer Image classification refers to utilizing pre-trained models trained on a large dataset from a different domain as a starting point for introducing <br> a new image classification model.TL leverages the knowledge learned from a different but related task to boost the performance of the breast image classification model.<br> It can extend earlier information by including data from a different domain to target future details. Subsequently, it may be a great idea to extract data from a related domain and transfer the <br> information extracted to the target domain.  
 In transfer learning, the pre-trained model's architecture is used as a feature extractor. The initial layers of the model, which learn <br> basic visual features like edges and textures, are retained. These layers are frozen, meaning their weights are not updated during training to preserve the known elements.<br>
 The latter layers of the pre-trained model, which capture more high-level and task-specific features, are modified and retrained using the breast image <br>
@@ -124,7 +127,7 @@ but it has been shown to achieve better results on some image classification tas
 ## Loss of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Loss.png)
 
-# Image Translation Models Used:
+# Image-to-Image Translation(I2I) Models Used:
 ## CycleGAN
 <br>
 The key idea behind implementing the CycleGAN model is to enforce cycle consistency between the translated and original images. The BCI (Breast Cancer Immunohistochemical) dataset solves <br> the problem of paired image-to-image translation in CycleGAN, so it is our proposed model. This BCI dataset contains 4870 recruited picture sets with a range of HER2 expression levels included in the <br> collection. The two image domains of interest are A and B. The model of cycleGAN consists of two generator systems, G_AB and G_BA, and two discriminator systems, D_A and D_B.<br>
@@ -171,7 +174,68 @@ binary data.
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Autoencoder/Autoencoder.drawio%20(2).png)
 
 
--PyramidPix2pix
+## PyramidPix2pix
+Our BCI dataset presents an unused challenge for Image translation. We proposed a new model pyramidpix2pix appropriate for structurally
+aligned data. We used a paired image-to-image generation technique in the Pyramidpix2pix
+model, which is a deep learning model used to memorize various leveled mapping
+between two different image domains attempting to synthesize IHC data directly
+with the paired hematoxylin and eosin (HE) stained images.H&E staining is
+a common technique used in pathology to visualize tissue structures and cellu-
+lar components. On the other hand, IHC staining detects specific biomarkers or proteins within the tissue sample. In this model, We used the generator structure
+of resnet-9blocks as the baseline, while the discriminator structure used the de-
+fault patchGAN; the Gaussian kernel used is 3×3 with a standard deviation of 1;
+the input images not preprocessed; the batch size set to 2; the optimizer used is
+Adam; the total number of training epochs set to 200: the learning rate of first 50
+epochs set to 0.0002 and the learning rate of the remaining 50 epochs gradually
+drops to 0. The PyramidPix2pix model leverages the power of generative ad-
+versarial networks (GANs). We train this model at low resolution 256*256 (less
+GPU memory), so we cropped images and utilized matched images where each
+input image compares to an H&E-stained test, and the comparing output image
+speaks to the same test recolored with IHC at epochs is 200. Amid the prepara-
+tion, the generators point to convert H&E images into IHC images, whereas the
+discriminators identify between the fake and real IHC images. We have taken a
+pre-trained model, resnet 9, shown with the generator and discriminator tensors
+file. The transfer between the generator and discriminator makes the Pyramid-
+Pix2pix demonstrate viability. The generator generates the IHC images that can
+trick the discriminator, whereas the discriminator recognizes which image is ac-
+tual and which is fake. The generator and discriminator move forward with their
+capacities through this ill-disposed handle, driving high-quality image genera-
+tions from H&E to IHC. By default, the pyramid structure in PyramidPix2pix
+facilitates four scales or multi-scale processing of the pyramid utilized for su-
+pervision. We’ll alter the alternative –design to use fewer scales (e.g. –design
+L1 L2 L3), enabling the model to capture global and local details effectively. It
+helps in preserving fine-grained information while generating the translated im-
+ages. The multiple generators and discriminators at different scales enhance the
+model’s ability to handle variations in image resolution and capture context at
+varying levels of detail. By training on a large dataset of paired H&E and IHC im-
+ages, the PyramidPix2pix model learns to understand the relationship between the
+staining techniques and can generate IHC-like images from H&E inputs. Once the
+training ended, we tested the cropped image at the exact resolution, 256*256, as
+in the training phase. Results displayed images in paired H&E and IHC domains.
+
+
+For our BCI dataset, we have to weaken the constraints of L1 loss
+while aligning the generated image and ground truth at different scales. Motivated
+by the scale-space hypothesis, we will perform the same scale transformation on
+the generated image and ground truth.
+The scale transformation comprises two steps:
+1) Employing a low-pass filter to smooth the image.
+2) Downsampling the smooth image.
+Since the Gaussian kernel is the only linear kernel that realizes the image
+scale transformation, our low-pass filter uniformly uses the Gaussian kernel with
+a standard deviation of 1. With the progress of Gaussian filtering, the image gets
+increasingly blurred, and we reduce the resolution by downsampling to remove
+redundant pixels. Gaussian convolutions are performed for each resolution level
+(octave) to achieve scale transformation. Our pix2pix pyramid has a few octaves;
+the first layer of each octave is achieved by downsampling the last image of the
+previous octave; each octave has five layers and performs 4 Gaussian blurrings.
+For each output of an octave, we define it as a scale. In our Gaussian Pyramid, we
+extract the first layer of images in each octave to calculate the loss.
+Fi and G represent the Gaussian filtering operation and the generator, respectively.
+x, y and z represent the input image, the ground truth, and random noise, respec-
+tively. Indeed, we cannot make the generated image highly consistent with the
+ground truth in the first octave. In that case, we can still make the generated
+image near the ground truth on a higher-dimensional scale.
 
 # Graphical Representation of Image-to-Image Translation Models:
 ## PSNR Values of Models:
@@ -179,7 +243,15 @@ binary data.
 ## SSIM score of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/SSIM_ig.png)
 
-## Abbreviations
+# Future Work:
+In future research, it is also possible to classify the breast histopathological im-
+ages into different stages of breast cancer and also consider other histopatho-
+logical image transformations, such as stain normalization, stain augmentation,
+or cross-modality translation, to enable more comprehensive analysis and explo-
+ration of histopathological data. We can also extend the application of image-to-
+image translation models beyond the H&E to IHC translation.
+
+# Abbreviations:
 
 • CNN : Convolutional Neural Network <br>
 • ViT : Vision Transformers <br>
