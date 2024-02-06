@@ -21,14 +21,52 @@ Image Generation/Translation performed on Autoencoders,Pyramidpix2pix and CycleG
 -Pytorch
 
 # Datasets Used:
-
+In this project, we used two Benchmark Datasets, i.e., BreakHis(Breast Cancer
+Histopathological) dataset, which consists of breast histopathology images, for
+the Classification task. Similarly, the BCI(Breast Cancer Immunohistochemical)
+dataset is especially for image generation/translation of images involving paired
+H&E with IHC and paired H&E to IHC images.
+## Breast Cancer Histopathological Image Classification (BreakHis)
+BreakHis is considered the most popular and clinically valued public
+breast cancer histopathological dataset<br>. It comprises 7,909 microscopic stained
+images of surgical biopsy (Sob)breast tumor tissue collected from 82 patients<br>
+utilizing diverse amplifying variables (40X,100X, 200X, and 400X). To date, it<br>
+contains 2,480 benign and 5,429 malignant samples (700X460 pixels, 3-channel<br>
+RGB, 8-bit depth in each channel, PNG arrange). This database was built in col-
+laboration <br> with the Laboratory of Vision Robotics and Imaging at the Federal
+University of Parana, Brazil .
+Division of the dataset BreaKHis <br> into two fundamental bunches: malignant
+and benign. Histologically benign may be a term alluding to an injury that does <br>
+not coordinate any criteria of malignancy-e.g., checked cellular atypia, mitosis,<br>
+disturbance of cellar layers, metastasize, etc. Regularly, benign tumors are moder-
+ately ”innocent,”<br> present slow growth, and remain localized. A malignant tumor is
+an equivalent word for cancer: injury can attack and crush adjoining structures (lo-
+cally obtrusive) <br> and spread to far-off locales (metastasize) to cause passing.Table
+1:defining Image Distribution by Magnification Factors and Classes of Malignant
+and Benign Cancer.<br> The dataset right now contains four unmistakable histologi-
+cal sorts of benign breast tumors: adenosis (A), fibroadenoma (F), phyllodes tu-
+mor (PT),<br> and tubular adenoma (TA); and four malignant tumors (breast cancer):
+ductal carcinoma(DC), lobular carcinoma (LC), mucinous carcinoma (MC), and <br>
+papillary carcinoma (PC).<br>
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
+- ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Breakhis%20dataset.jpg)
 
-  - ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Breakhis%20dataset.jpg)
-  
+## Breast Cancer Immunohistochemical (BCI)
+The expression of human epidermal growth factor receptor 2 (HER 2) <br> 
+be evaluated in order to create treatments for breast cancer.Routine testing of
+HER2 <br>  using immunohistochemical (IHC) techniques is expensive. Therefore, we
+propose for the first time the diagnosis of breast cancer immunohistochemistry
+(BCI) <br>  as a direct test that works on paired and IHC data with hematoxylin and
+eosin (H&E) as well as translation of H&E to IHC stained images. This database
+contains 4870 registered image pairs <br>  containing varying levels of HER2 activity.
+Many experiments show that BCI poses new problems in the current quest for
+image translation.<br>  Additionally, BCI opens the door to future pathological studies
+to measure HER2 expression based on synthetic IHC images. BCI is a combined <br> 
+dataset that converts HE-stained slices into immunohistochemistry results <br>  and a
+pair of H&E to HER2 expression image translation dataset.
+<br>
 - [BCI](https://bci.grand-challenge.org/dataset/)
-  
-  ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
+ ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
 
 # Image Classification using Transfer Learning:
 Transfer learning in Breast Cancer Image classification refers to utilizing pre-trained models trained on a large dataset from a different domain as a starting point for introducing <br> a new image classification model.TL leverages the knowledge learned from a different but related task to boost the performance of the breast image classification model.<br> It can extend earlier information by including data from a different domain to target future details. Subsequently, it may be a great idea to extract data from a related domain and transfer the <br> information extracted to the target domain.  
@@ -135,7 +173,7 @@ binary data.
 
 -PyramidPix2pix
 
-# Graphical Representation of Image-TO-Image Translation Models:
+# Graphical Representation of Image-to-Image Translation Models:
 ## PSNR Values of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/PSNR_ig.png)
 ## SSIM score of Models:
