@@ -44,29 +44,16 @@ The foundation of many Transformer blocks is the Vision Transformer (ViT). Using
 
 
 ## EfficientNet_B3
-<br>
-Medical image analysis become an important tool for diagnosing and treating cancer. One such algorithm is the EfficientNet, which achieves state-of-the-art
-performance in various image classification tasks, <br>including breast cancer classification.For this classification, the EfficientNet
-algorithm train on medical images of different classes of cancer to learn features that are specific to
-each type. <br> The algorithm is to classify
-new medical images into their respective cancer classes
-based on the learned features\cite{Anwar_2023}.<br>
-EfficientNet is a family of deep-learning models 
-designed to be both practical and efficient in terms of memory and computation.<br> It is a three-block baseline model proven to achieve state-of-the-art performance on various image classification benchmarks, using significantly fewer parameters and analyses than other models. The accuracy of EfficientNet_B3 is 86.8% and 0.32 loss.<br>
+
 
 ## MobileNet_V2
-<br>
-MobileNet is a family of deep-learning models designed to be lightweight and efficient. The MobileNet architecture model achieves high accuracy with low resource usage\cite{laxmisagar2022detection}<br>. It is mainly for high performance on resource-constrained devices. MobileNet-V2 is a 1.4x faster and 4x smaller version of the original MobileNet <br> model while maintaining similar accuracy. The accuracy of MobileNet_V2 is 90.4% and 0.24 loss.
+
 
 ## DenseNet-121
-<br>
-DenseNet-121 is a deep CNN design characterized by dense connectivity that uses dense connections to improve information flow between layers. DenseNet-121 is an architecture for deep <br> convolutional neural networks introduced in 2016\cite{diagnostics13132242}. 
-Its design is to be more efficient than traditional
-convolutional neural networks.<br> It has a dense connectivity architecture, which allows it to learn long-range dependencies between features.DenseNet-121 is a 121-layer DenseNet model that should achieve state-of-the-art results on <br> various image classification benchmarks used for binary classification. \cite{man2020classification}.The accuracy of DenseNet-121 is 89.6% and 0.26 loss.
+
 
 ## VGG-16
-<br>
-The VGG-16 network comprises 16 layers, is extremely simple to construct, and has a 7.7% error rate\cite{kashyap2022breast}. It is still a powerful model and has <br> been shown to achieve good results on breast cancer classification tasks. The accuracy of VGG-16 is 85.5% and 0.92 loss.
+
 
 
 ## VGG-19
@@ -83,12 +70,8 @@ but it has been shown to achieve better results on some image classification tas
 # Image-to-Image Translation(I2I) Models Used:
 ## CycleGAN
 <br>
-The key idea behind implementing the CycleGAN model is to enforce cycle consistency between the translated and original images. The BCI (Breast Cancer Immunohistochemical) dataset solves <br> the problem of paired image-to-image translation in CycleGAN, so it is our proposed model. This BCI dataset contains 4870 recruited picture sets with a range of HER2 expression levels included in the <br> collection. The two image domains of interest are A and B. The model of cycleGAN consists of two generator systems, G_AB and G_BA, and two discriminator systems, D_A and D_B.<br>
-The CycleGAN learns to minimize two types of losses during training: adversarial loss and cycle consistency loss. The adversarial loss encourages the generator to generate realistic-looking <br> images that fool the discriminator into identifying real or fake images. Generator G_AB takes an input image from A and tries to generate a realistic image in  B that tricks discriminator D_B with <br> mapping G_AB: A → B. So in the same way also, generator G_BA creates an image and tries to trick discriminator D_A whereas D_A points to recognize between images in domain A and interpreted images G_BA, D_B points <br> to discriminate between
-images in domain B  and G_AB\cite{jose2021generative}\cite{zhu2020unpaired}. The generator takes an image from the source domain (H\&E) and tries <br>
-to transform it into an image that resembles the target domain (IHC). On the other hand, the discriminator is responsible for distinguishing between the generated and <br> original images from the target domain.
-By iteratively optimizing these losses, the CycleGAN can learn to map H\&E images to IHC images and vice versa.<br> This approach is instrumental in medical image analysis.
-Once trained, <br>the CycleGAN can convert unseen H\&E images to IHC images by feeding them into the generator.
+The main goal of applying the CycleGAN model is to ensure that the translated and original pictures follow the same cycle. Our suggested model, BCI (Breast Cancer Immunohistochemical) dataset, resolves the paired image-to-image translation issue in CycleGAN. 4870 recruited image sets with a variety of HER2 expression levels are included in the collection of this BCI dataset. A and B are the two picture domains of interest. Two generator systems, G_AB and G_BA, plus two discriminator systems, D_A and D_B, make up the cycleGAN model.
+Throughout training, the CycleGAN learns to minimize two different kinds of losses: adversarial loss and cycle consistency loss. The adversarial loss incentivizes the generator to produce realistic-appearing pictures that deceive the discriminator into classifying them as authentic or fraudulent.
 
 
 
