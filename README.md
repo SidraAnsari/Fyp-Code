@@ -19,8 +19,8 @@ BreakHis is regarded as the most well-liked and therapeutically significant publ
 - ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Breakhis%20dataset.jpg)
 
 ## BCI
-To develop therapies for breast cancer, the expression of human epidermal growth factor receptor 2 (HER 2) should be assessed. 4870 recorded picture pairings with various HER2 activity levels are present in this database.
-Numerous tests demonstrate that BCI creates additional challenges in the ongoing effort to translate images.  Furthermore, BCI makes it possible for pathology research in the future to quantify HER2 expression using artificial IHC pictures. BCI is a composite dataset that translates images of HER2 expression from H&E to immunohistochemical findings and HE-stained slices to images.
+
+BCI is a composite dataset that translates images of HER2 expression from H&E to immunohistochemical findings and HE-stained slices to images.4870 recorded picture pairings with various HER2 activity levels are present in this database.
 - [BCI](https://bci.grand-challenge.org/dataset/)
  ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
 # Methods:
