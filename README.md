@@ -12,7 +12,7 @@ My research uses image classification and translation to diagnose breast cancer 
 -Pytorch
 
 # Datasets Used:
-For the Classification working in this study, we employed two benchmark datasets: the BreakHis (Breast Cancer Histopathological) dataset, which is made up of pictures of breast histopathology. The BCI (Breast Cancer Immunohistochemical) dataset, on the other hand, is specifically used for picture production and translation of paired H&E to IHC images and paired H&E with IHC images.
+For the Classification working in this study, we employed two benchmark datasets: the BreakHis (Breast Cancer Histopathological) dataset, which is made up of pictures of breast histopathology. The BCI (Breast Cancer Immunohistochemical) dataset, on the other hand, is specifically used for picture production and translation of paired H&E to IHC images.
 ## BreakHis
 BreakHis is regarded as the most well-liked and therapeutically significant public histopathology dataset for breast cancer<br>. Using various amplification factors (40X, 100X, 200X, and 400X), 7,909 microscopic stained pictures of surgical biopsy (Sob)breast tumor tissue obtained from 82 individuals are included. It now has 5,429 cancerous and 2,480 benign samples (700X460 pixels, 3-channel RGB, 8-bit depth in each channel, PNG arrangement). 
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
@@ -26,7 +26,7 @@ Numerous tests demonstrate that BCI creates additional challenges in the ongoing
 # Methods:
 ## Image Classification :
 
-The architecture of the pre-trained model is employed as a feature extractor in transfer learning. The model's first layers, which pick up on <br> fundamental visual characteristics like edges and textures, are kept. Because these layers are frozen, the known components are maintained during training without updating their weights.(br>
+The architecture of the pre-trained model is employed as a feature extractor in transfer learning. The model's first layers, which pick up on <br> fundamental visual characteristics like edges and textures, are kept. Because these layers are frozen, the known components are maintained during training without updating their weights.<br>
 The breast image <br>dataset is used to adjust and retrain the pre-trained model's later layers, which capture more sophisticated and task-specific properties. This process is known as fine-tuning. Through adjustments to these layers' weights, the model adjusts to the unique features of the cancer picture classification job<br>.
 
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/TL%20new.drawio.png)
@@ -65,7 +65,7 @@ The foundation of many Transformer blocks is the Vision Transformer (ViT). Using
 ## Loss of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Loss.png)
 
-# Image-to-Image Translation(I2I) Models Used:
+# Image Translation Models Used:
 ## CycleGAN
 <br>
 The main goal of applying the CycleGAN model is to ensure that the translated and original pictures follow the same cycle. Our suggested model, BCI (Breast Cancer Immunohistochemical) dataset, resolves the paired image-to-image translation issue in CycleGAN. 4870 recruited image sets with a variety of HER2 expression levels are included in the collection of this BCI dataset. A and B are the two picture domains of interest. Two generator systems, G_AB and G_BA, plus two discriminator systems, D_A and D_B, make up the cycleGAN model.
