@@ -10,10 +10,10 @@ microscopic and color-coded, aid in identifying cellular and tissue
 components.
 Image Classification performed on CNN initally because CNN which is a time-consuming task and that is why we then switched to Transfer Learning Model using pre-trained models such as SOTA model Vision Transformers using BreakHis Dataset.
 H&E images are essential for identifying cellular and tissue components. In contrast, Immunohistochemistry images reveal spatial information of specific cell types.
-CycleGAN, a state-of-the-art model, is used in Image-
+CycleGAN, a proposed model, is used in Image-
 to-Image Translation experiments to generate/translate immunohistochemical im-
-ages from Hematoxylin and Eosin images for breast cancer treatment.These two
-images are a sequence-to-sequence data model in breast cancer image translation.
+ages from Hematoxylin and Eosin images for breast cancer treatment.
+
 
 # Setup:Envs
 -Windows<br>
