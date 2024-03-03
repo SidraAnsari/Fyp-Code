@@ -14,7 +14,7 @@ My research uses image classification and translation to diagnose breast cancer 
 # Datasets Used:
 For the Classification working in this study, we employed two benchmark datasets: the BreakHis (Breast Cancer Histopathological) dataset, which is made up of pictures of breast histopathology. The BCI (Breast Cancer Immunohistochemical) dataset, on the other hand, is specifically used for picture production and translation of paired H&E to IHC images.
 ## BreakHis
-BreakHis is regarded as the most well-liked and therapeutically significant public histopathology dataset for breast cancer<br>. Using various amplification factors (40X, 100X, 200X, and 400X), 7,909 microscopic stained pictures of surgical biopsy (Sob)breast tumor tissue obtained from 82 individuals are included. It now has 5,429 cancerous and 2,480 benign samples (700X460 pixels, 3-channel RGB, 8-bit depth in each channel, PNG arrangement). 
+BreakHis is regarded as the most well-liked and therapeutically significant public histopathology dataset for breast cancer<br>. Using various amplification factors (40X, 100X, 200X, and 400X), 7,909 microscopic stained pictures of surgical biopsy (Sob)breast tumor tissue obtained from 82 individuals are included. It now has 5,429 cancerous and 2,480 benign samples. 
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
 - ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Breakhis%20dataset.jpg)
 
