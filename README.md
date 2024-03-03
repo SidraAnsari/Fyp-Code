@@ -57,9 +57,7 @@ The foundation of many Transformer blocks is the Vision Transformer (ViT). Using
 
 
 ## VGG-19
-<br>
-VGG-19 is a more extensive and deeper version of VGG-16. VGG19 is a variant of VGG consisting of 19 layers that are 16 convolutional layers, and three fully connected layers,<br> in addition to 5 max-pooling layers and 1 SoftMax layer)\cite{wakili2022classification} \cite{simonyan2014very}.<br> It has a deeper architecture with more parameters and is more computationally expensive,
-but it has been shown to achieve better results on some image classification tasks. <br>The accuracy of VGG-19 is 80.3% and 0.87 loss.
+
 
 # Graphical Representation of Image Classification Models:
 ## Accuracy of Models:
@@ -80,20 +78,7 @@ Throughout training, the CycleGAN learns to minimize two different kinds of loss
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/CycleGAN/cycleganPM.png)
 <br>
 ## Autoencoders<br>
-Neural networks using autoencoders are used for dimensionality reduction and unsupervised learning. It is intended to learn an encoding or compressed representation of the input data, from which it will subsequently recreate the original data.(br>
 
-• An encoder and a decoder are the two primary components of autoencoders. An input, usually a high-dimensional data point, is mapped to a lower-dimensional representation known as the latent space or encoding by the encoder.(br>
-
-• Typically, the encoder is made up of several layers that gradually lower the dimensionality of the input data, such as fully connected or convolutional layers.(br>
-
-
-• In contrast, the encoded representation is given to the decoder, which uses it to reassemble the original input. With layers that progressively increase the dimensionality until the output matches the input, the decoder is a mirror image of the encoder.(br>
-
-• The autoencoder learns to reduce the reconstruction error, which quantifies the variation between the original input and the decoder's output, by feeding it input data during training. Through this training process, the autoencoder is encouraged to identify and pick up useful characteristics from the input data that are required for precise reconstruction. 
-<br>The difference in similarity between the input and the output is measured by the loss function. 
-
-• Back-propagation is used to minimize the loss function in order to train the autoencoder. The encoder processes the input data to produce the encoded representation, which is then used by the decoder to reconstruct the input. The loss is calculated as the difference between the original input and the reconstructed output, and the autoencoder's weights are updated by propagating the gradients backward.
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Autoencoder/Autoencoder.drawio%20(2).png)
 
 
 ## PyramidPix2pix
