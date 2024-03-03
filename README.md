@@ -1,18 +1,6 @@
 # Diagnosis and Treatment of Breast Cancer using H&E Image Analysis:
 
-My Research based on Breast Cancer Disease diagnosis and treatment of Haematoxylin & Eosin Images with the help of Image Classification and Translation.
-Breast cancer is the driving cause of cancer-related
-passings among women around the world. This research explores
-the use of deep learning models in Breast cancer diagnosis and
-treatment using histopathological images. These images are used to
-examine breast cancer tissue sections which are
-microscopic and color-coded, aid in identifying cellular and tissue
-components.
-Image Classification performed on CNN initally because CNN which is a time-consuming task and that is why we then switched to Transfer Learning Model using pre-trained models such as SOTA model Vision Transformers using BreakHis Dataset.
-H&E images are essential for identifying cellular and tissue components. In contrast, Immunohistochemistry images reveal spatial information of specific cell types.
-CycleGAN, a proposed model, is used in Image-
-to-Image Translation experiments to generate/translate immunohistochemical im-
-ages from Hematoxylin and Eosin images for breast cancer treatment.
+My research uses image classification and translation to diagnose breast cancer disease using hematoxylin and eosin images. Worldwide, breast cancer is the leading cause of death from cancer among women. This study investigates the use of deep learning models to histopathology image-based breast cancer diagnosis and therapy. These photos help identify cellular and tissue components by examining microscopic, color-coded breast cancer tissue slices. First, we used CNN for Image Classification, but this takes a lot of time. Therefore, we moved to Transfer Learning Model, which uses pre-trained models like SOTA model Vision Transformers utilizing BreakHis Dataset. The identification of cellular and tissue components requires the use of H&E pictures. Immunohistochemistry pictures, on the other hand, show the spatial characteristics of particular cell types. In Image-to-Image Translation studies, a suggested model called CycleGAN is utilized to generate/translate immunohistochemistry pictures from Hematoxylin and Eosin images for the treatment of breast cancer.
 
 
 # Setup:Envs
