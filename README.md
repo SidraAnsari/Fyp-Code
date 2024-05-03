@@ -20,7 +20,7 @@ BreakHis is regarded as the most well-liked and therapeutically significant publ
 
 ## BCI
 
-BCI is a composite dataset that translates images of HER2 expression from H&E to immunohistochemical findings and HE-stained slices to images.4870 recorded picture pairings with various HER2 activity levels are present in this database.
+BCI is a composite dataset that translates images of HER2 expression from H&E to immunohistochemical findings and HE-stained slices to images.4870 recorded image pairings with various HER2 activity levels are present in this database.
 - [BCI](https://bci.grand-challenge.org/dataset/)
  ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/datasetpreview6.png)
 # Methods:
@@ -29,7 +29,7 @@ BCI is a composite dataset that translates images of HER2 expression from H&E to
 The architecture of the pre-trained model is employed as a feature extractor in transfer learning. The model's first layers, which pick up on <br> fundamental visual characteristics like edges and textures, are kept. Because these layers are frozen, the known components are maintained during training without updating their weights.<br>
 The breast cancer image <br>dataset is used to adjust and retrain the pre-trained model's later layers, which capture more sophisticated and task-specific properties. This process is known as fine-tuning. Through adjustments to these layers' weights, the model adjusts to the unique features of the cancer picture classification job<br>.
 
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/TL%20new.drawio.png)
+
 
 # Models:
 # Image Classification Models Used:
@@ -37,10 +37,7 @@ The breast cancer image <br>dataset is used to adjust and retrain the pre-traine
 <br>
 The Vision Transformer (ViT) is the base of numerous Transformer blocks. The ViT divides the input histopathological image into fixed-size patches that may be thought of as tokens using the BreakHis dataset. Next, we apply a Encoding layer, which ensures that our picture patches match the input order by linearly embedding each patch. Subsequently, we embed several ResNet layers <br> in the Vision Transformer (ViT) model, which yield better results than the state-of-the-art convolutional networks. a transformer directly applied to image patch sequences that perform exceptionally well on image classification tasks.We employ the traditional method of appending an extra learnable "classification token" to the series in order to classify the breast cancer <br> images and ascertain if the patient has benign (non-cancerous) or malignant (cancerous) infections.
 
-## The framework of the proposed Vision Transformer model:
 
-
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/PM%20VIT.drawio.png)
 
 
 ## EfficientNet_B3
@@ -62,8 +59,7 @@ The Vision Transformer (ViT) is the base of numerous Transformer blocks. The ViT
 # Graphical Representation of Image Classification Models:
 ## Accuracy of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Acc.png)
-## Loss of Models:
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/breast_cancer_detection-master/IC_Loss.png)
+
 
 # Image Translation Models Used:
 ## CycleGAN
@@ -73,9 +69,7 @@ Throughout training, the CycleGAN learns to minimize two different kinds of loss
 
 
 
-## The framework of the proposed CycleGAN model:
 
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/CycleGAN/cycleganPM.png)
 <br>
 ## Autoencoders<br>
 
