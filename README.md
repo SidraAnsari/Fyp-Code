@@ -79,8 +79,7 @@ Throughout training, the CycleGAN learns to minimize two different kinds of loss
 
 
 # Graphical Representation of Image-to-Image Translation Models:
-## PSNR Values of Models:
-![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/PSNR_ig.png)
+
 ## SSIM score of Models:
 ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/SSIM_ig.png)
 
