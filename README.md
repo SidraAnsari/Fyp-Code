@@ -14,7 +14,7 @@ My research uses image classification and translation to diagnose breast cancer 
 # Datasets Used:
 For the Classification working in this study, we employed two benchmark datasets: the BreakHis (Breast Cancer Histopathological) dataset, which is made up of pictures of breast histopathology. The BCI (Breast Cancer Immunohistochemical) dataset, on the other hand, is specifically used for picture production and translation of paired H&E to IHC images.
 ## BreakHis
-BreakHis is regarded as the most well-liked and therapeutically significant public histopathology dataset for breast cancer<br>. Using various amplification factors (40X, 100X, 200X, and 400X), 7,909 microscopic stained pictures of surgical biopsy breast tumor tissue obtained from 82 individuals are included. It now has 5,429 cancerous and 2,480 benign samples. 
+BreakHis is regarded as the most well-liked and therapeutically significant public histopathology dataset for breast cancer<br>. Using various amplification factors, 7,909 microscopic stained pictures of surgical biopsy breast tumor tissue obtained from 82 individuals are included. It now has 5,429 cancerous and 2,480 benign samples. 
 - [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/)
 - ![Alt text](https://github.com/SidraAnsari/Fyp-Code/blob/main/Breakhis%20dataset.jpg)
 
@@ -93,19 +93,7 @@ Throughout training, the CycleGAN learns to minimize two different kinds of loss
 # Future Work:
 To facilitate more thorough analysis and exploration of histopathological data, future research can also classify the breast histopathological images into different stages of breast cancer and take into account other histopathological image transformations, such as stain normalization, stain augmentation, or cross-modality translation. Beyond H&E translation, we can also use image-to-image translation models to IHC translation.
 
-# Abbreviations:
 
-• CNN : Convolutional Neural Network <br>
-• ViT : Vision Transformers <br>
-• VGG-16 : 16-layer variant of the Visual Geometry Group (VGG) convolutional
-neural network (CNN) architecture.<br>
-• VGG-19: VGG-19 stands for the 19-layer variant of the Visual Geometry
-Group (VGG) convolutional neural network (CNN) architecture.<br>
-• cycleGAN : Cycle-Consistent Generative Adversarial Network <br>
-• H & E : Hematoxylin and Eosin <br>
-• IHC : Immunohistochemical <br>
-• BCI : Breast Cancer Immunohistochemical Dataset <br>
-• BreaKHis :Breast Cancer Histopathological Dataset
 
 
 
